@@ -1,1 +1,0 @@
-# angular17-games-management

@@ -1,0 +1,13 @@
+<div class="user-view">
+    <h3>User-Games</h3>
+    @if (!isLogged) {
+    <div class="user-login">
+        <input type="text" id="username" name="username" placeholder="user" />
+        <button (click)="logIn(username)">Log in</button>
+    </div>
+    } @else {
+    <h4>Welcome {{ username }}</h4>
+    <button (click)="logOut()">Log out</button>
+    <app-games/>
+    }
+</div>
