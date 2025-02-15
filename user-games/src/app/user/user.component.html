@@ -2,11 +2,11 @@
     <h3>User-Games</h3>
     @if (!isLogged) {
     <div class="user-login">
-        <input type="text" id="username" name="username" placeholder="user" />
-        <button (click)="logIn(username)">Log in</button>
+            <input type="text" id="username" [(ngModel)]="username" placeholder="user" />
+            <button (click)="logIn(username)">Log in</button>
     </div>
     } @else {
-    <h4>Welcome {{ username }}</h4>
+    <h6>Welcome {{ username }}</h6>
     <button (click)="logOut()">Log out</button>
     <app-games/>
     }
